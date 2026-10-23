@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Adhally Kobi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="tema-escuro">
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="cabecalho">
+        <div class="conteiner-cabecalho">
+            <a href="#inicio" class="logotipo">&lt;AdhallyKobi /&gt;</a>
+            
+            <button class="menu-hamburguer" id="botao-menu" aria-label="Abrir Menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <nav class="navegacao" id="navegacao-principal">
+                <ul class="lista-navegacao">
+                    <li><a href="#inicio" class="link-nav">Início</a></li>
+                    <li><a href="#sobre" class="link-nav">Sobre</a></li>
+                    <li><a href="#educacao" class="link-nav">Educação</a></li>
+                    <li><a href="#habilidades" class="link-nav">Habilidades</a></li>
+                    <li><a href="#projetos" class="link-nav">Projetos</a></li>
+                    <li><a href="#estudos" class="link-nav">Estudos</a></li>
+                    <li><a href="#contato" class="link-nav">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="botao-tema" id="botao-alternar-tema" aria-label="Alternar Tema">
+                <i class="bi bi-sun-fill icone-sol"></i>
+                <i class="bi bi-moon-stars-fill icone-lua"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Principal (Hero) -->
+        <section id="inicio" class="secao-hero">
+            <div class="conteiner secao-hero-conteudo">
+                <span class="saudacao">Olá, bem-vindo(a) ao meu portfólio!</span>
+                <h1 class="nome-principal">Adhally Kobi</h1>
+                <h2 class="subtitulo-efeito"><span id="texto-maquina-escrever"></span><span class="cursor">|</span></h2>
+                <p class="apresentacao-resumo">
+                    Estudante de Informática para Internet focado em criar interfaces incríveis, modernas e funcionais para a Web.
+                </p>
+                <div class="grupo-botoes-hero">
+                    <a href="curriculo.pdf" target="_blank" class="botao-primario">
+                        <i class="bi bi-file-earmark-arrow-down-fill"></i> Baixar meu CV
+                    </a>
+                    <a href="#contato" class="botao-secundario">
+                        <i class="bi bi-chat-text-fill"></i> Fale Comigo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="secao">
+            <div class="conteiner">
+                <h2 class="titulo-secao"><i class="bi bi-person-badge"></i> Sobre Mim</h2>
+                <div class="cartao-sobre">
+                    <p>
+                        Sou estudante do 1º ano do Ensino Médio Técnico em Informática para Internet pela SESC Escola, em parceria com o SENAC. Com forte foco em programação, iniciei minha trilha de aprendizado me especializando em desenvolvimento Front-end.
+                    </p>
+                    <p>
+                        Nos próximos anos, minha formação se expandirá para o Back-end (2º ano) e desenvolvimento Mobile (3º ano), construindo uma base sólida para me tornar um Desenvolvedor Full Stack. Sou apaixonado por criar interfaces interativas e busco minha primeira oportunidade na área de tecnologia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Educação (Opção 1: Linha do Tempo) -->
+        <section id="educacao" class="secao">
+            <div class="conteiner">
+                <h2 class="titulo-secao"><i class="bi bi-journal-bookmark-fill"></i> Formação Técnica</h2>
+                <div class="cartao-educacao">
+                    <div class="cabecalho-educacao">
+                        <h3>Ensino Médio Integrado ao Técnico em Informática para Internet</h3>
+                        <p class="instituicao">SESC ESCOLA & SENAC — Conclusão prevista: 2026</p>
+                    </div>
+                    
+                    <!-- Roadmap em Linha do Tempo -->
+                    <div class="linha-do-tempo">
+                        <div class="etapa-linha ativa">
+                            <div class="icone-etapa"><i class="bi bi-code-slash"></i></div>
+                            <div class="conteudo-etapa">
+                                <span class="tag-status em-andamento">1º Ano • Em Andamento</span>
+                                <h4>Especialização Front-end</h4>
+                                <p>HTML5, CSS3, JavaScript Vanilla, Lógica de Programação e Versionamento com Git/GitHub.</p>
+                            </div>
+                        </div>
+
+                        <div class="etapa-linha">
+                            <div class="icone-etapa"><i class="bi bi-server"></i></div>
+                            <div class="conteudo-etapa">
+                                <span class="tag-status proximo-passo">2º Ano • Próximo Passo</span>
+                                <h4>Especialização Back-end</h4>
+                                <p>Estrutura de Banco de Dados, APIs, Regras de Negócio e Linguagens Server-side.</p>
+                            </div>
+                        </div>
+
+                        <div class="etapa-linha">
+                            <div class="icone-etapa"><i class="bi bi-phone"></i></div>
+                            <div class="conteudo-etapa">
+                                <span class="tag-status futuro">3º Ano • Futuro</span>
+                                <h4>Especialização Mobile</h4>
+                                <p>Desenvolvimento de Aplicações Móveis Nativas e Híbridas para Android e iOS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Habilidades -->
+        <section id="habilidades" class="secao">
+            <div class="conteiner">
+                <h2 class="titulo-secao"><i class="bi bi-tools"></i> Minhas Habilidades</h2>
+                <div class="grade-habilidades">
+                    <div class="cartao-habilidade"><i class="bi bi-filetype-html"></i><span>HTML5</span></div>
+                    <div class="cartao-habilidade"><i class="bi bi-filetype-css"></i><span>CSS3</span></div>
+                    <div class="cartao-habilidade"><i class="bi bi-filetype-js"></i><span>JavaScript</span></div>
+                    <div class="cartao-habilidade"><i class="bi bi-cpu"></i><span>Lógica de Programação</span></div>
+                    <div class="cartao-habilidade"><i class="bi bi-diagram-3"></i><span>Algoritmos</span></div>
+                    <div class="cartao-habilidade"><i class="bi bi-git"></i><span>Git</span></div>
+                    <div class="cartao-habilidade"><i class="bi bi-github"></i><span>GitHub</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos de Destaque -->
+        <section id="projetos" class="secao">
+            <div class="conteiner">
+                <h2 class="titulo-secao"><i class="bi bi-briefcase-fill"></i> Projetos de Destaque</h2>
+                <div class="grade-projetos">
+                    
+                    <!-- Projeto 1 -->
+                    <article class="cartao-projeto">
+                        <div class="imagem-projeto">
+                            <i class="bi bi-laptop icone-placeholder"></i>
+                        </div>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">DevSetup</h3>
+                            <p class="descricao-projeto">Aplicação web desenvolvida para a organização e escolha de configurações de ambientes de desenvolvimento.</p>
+                            <div class="tags-tecnologias">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                            <div class="links-projeto">
+                                <a href="https://adhallykobi-afk.github.io/projeto-devsetup/" target="_blank" class="link-botao"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                                <a href="https://github.com/adhallykobi-afk/projeto-devsetup" target="_blank" class="link-botao secundario"><i class="bi bi-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="cartao-projeto">
+                        <div class="imagem-projeto">
+                            <i class="bi bi-music-note-list icone-placeholder"></i>
+                        </div>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">Compasso Musical</h3>
+                            <p class="descricao-projeto">Página interativa criada para exibição de teoria e elementos de ritmos e compassos musicais.</p>
+                            <div class="tags-tecnologias">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                            <div class="links-projeto">
+                                <a href="https://adhallykobi-afk.github.io/compasso-musical/" target="_blank" class="link-botao"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                                <a href="https://github.com/adhallykobi-afk/compasso-musical" target="_blank" class="link-botao secundario"><i class="bi bi-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Repositórios de Estudo -->
+        <section id="estudos" class="secao">
+            <div class="conteiner">
+                <h2 class="titulo-secao"><i class="bi bi-book-fill"></i> Repositórios de Estudo</h2>
+                <p class="subtitulo-secao">Anotações e exercícios práticos desenvolvidos durante as aulas:</p>
+                
+                <div class="grade-estudos">
+                    <a href="https://github.com/adhallykobi-afk/html" target="_blank" class="cartao-estudo">
+                        <i class="bi bi-folder-fill icone-pasta"></i>
+                        <div class="info-estudo">
+                            <h4>Trilha de HTML e CSS</h4>
+                            <p>Exercícios de estruturação web, CSS Flexbox e estilização.</p>
+                        </div>
+                        <i class="bi bi-arrow-right icone-seta"></i>
+                    </a>
+
+                    <a href="https://github.com/adhallykobi-afk/javascript" target="_blank" class="cartao-estudo">
+                        <i class="bi bi-folder-fill icone-pasta"></i>
+                        <div class="info-estudo">
+                            <h4>Trilha de JavaScript Vanilla</h4>
+                            <p>Manipulação de DOM, eventos, funções e scripts interativos.</p>
+                        </div>
+                        <i class="bi bi-arrow-right icone-seta"></i>
+                    </a>
+
+                    <a href="https://github.com/adhallykobi-afk/algoritmos" target="_blank" class="cartao-estudo">
+                        <i class="bi bi-folder-fill icone-pasta"></i>
+                        <div class="info-estudo">
+                            <h4>Lógica e Algoritmos</h4>
+                            <p>Exercícios de lógica de programação em Portugol / Pseudocódigo.</p>
+                        </div>
+                        <i class="bi bi-arrow-right icone-seta"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="secao">
+            <div class="conteiner">
+                <h2 class="titulo-secao"><i class="bi bi-chat-dots-fill"></i> Vamos Conversar?</h2>
+                <p class="subtitulo-secao">Sinta-se à vontade para entrar em contato ou acompanhar meus estudos!</p>
+                
+                <div class="grade-contatos">
+                    <a href="mailto:adhallykobi@gmail.com" class="cartao-contato cartao-email">
+                        <i class="bi bi-envelope-at-fill"></i>
+                        <span>E-mail</span>
+                        <small>adhallykobi@gmail.com</small>
+                    </a>
+
+                    <a href="https://github.com/adhallykobi-afk" target="_blank" class="cartao-contato cartao-github">
+                        <i class="bi bi-github"></i>
+                        <span>GitHub</span>
+                        <small>@adhallykobi-afk</small>
+                    </a>
+
+                    <a href="https://wa.me/5565993346895" target="_blank" class="cartao-contato cartao-whatsapp">
+                        <i class="bi bi-whatsapp"></i>
+                        <span>WhatsApp</span>
+                        <small>(65) 99334-6895</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="conteinerconteudo-rodape">
+            <p>Desenvolvido com <i class="bi bi-suit-heart-fill icone-coracao"></i> por <strong>Adhally Kobi</strong></p>
+            <p class="copyright">&copy; <span id="ano-atual"></span> Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="botao-topo" aria-label="Voltar ao Topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

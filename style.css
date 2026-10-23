@@ -1,0 +1,631 @@
+/* ==========================================================================
+    VARIÁVEIS DE CORES E TEMA (LIGHT & DARK MODE)
+   ========================================================================== */
+:root {
+    /* Tema Claro */
+    --cor-fundo-claro: #F8F9FA;
+    --cor-superficie-clara: #FFFFFF;
+    --cor-texto-claro: #212529;
+    --cor-texto-suave-claro: #6C757D;
+    --cor-primaria-clara: #0D6EFD;
+    --cor-secundaria-clara: #0B5ED7;
+    --cor-borda-clara: #E9ECEF;
+    --sombra-clara: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    /* Tema Escuro (Padrão) */
+    --cor-fundo-escuro: #121212;
+    --cor-superficie-escura: #1E1E1E;
+    --cor-texto-escuro: #E0E0E0;
+    --cor-texto-suave-escuro: #A0A0A0;
+    --cor-primaria-escura: #BB86FC;
+    --cor-secundaria-escura: #03DAC6;
+    --cor-borda-escura: #2C2C2C;
+    --sombra-escura: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    --fonte-principal: 'Poppins', sans-serif;
+    --transicao-suave: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Definição Padrão (Dark Mode) */
+body.tema-escuro {
+    --cor-fundo: var(--cor-fundo-escuro);
+    --cor-superficie: var(--cor-superficie-escura);
+    --cor-texto: var(--cor-texto-escuro);
+    --cor-texto-suave: var(--cor-texto-suave-escuro);
+    --cor-primaria: var(--cor-primaria-escura);
+    --cor-secundaria: var(--cor-secundaria-escura);
+    --cor-borda: var(--cor-borda-escura);
+    --sombra-card: var(--sombra-escura);
+}
+
+/* Tema Claro */
+body.tema-claro {
+    --cor-fundo: var(--cor-fundo-claro);
+    --cor-superficie: var(--cor-superficie-clara);
+    --cor-texto: var(--cor-texto-claro);
+    --cor-texto-suave: var(--cor-texto-suave-claro);
+    --cor-primaria: var(--cor-primaria-clara);
+    --cor-secundaria: var(--cor-secundaria-clara);
+    --cor-borda: var(--cor-borda-clara);
+    --sombra-card: var(--sombra-clara);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: var(--transicao-suave);
+    line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor-fundo);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 5px;
+}
+
+.conteiner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.secao {
+    padding: 80px 0;
+}
+
+.titulo-secao {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cor-primaria);
+}
+
+.subtitulo-secao {
+    color: var(--cor-texto-suave);
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+    CABECALHO E NAVEGAÇÃO
+   ========================================================================== */
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--cor-borda);
+    z-index: 1000;
+    transition: var(--transicao-suave);
+}
+
+body.tema-claro .cabecalho {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.conteiner-cabecalho {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.lista-navegacao {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.link-nav {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao-suave);
+}
+
+.link-nav:hover {
+    color: var(--cor-primaria);
+}
+
+.botao-tema {
+    background: transparent;
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transicao-suave);
+}
+
+.botao-tema:hover {
+    color: var(--cor-primaria);
+    transform: rotate(15deg);
+}
+
+.icone-sol { display: none; }
+.icone-lua { display: inline-block; }
+
+body.tema-claro .icone-sol { display: inline-block; }
+body.tema-claro .icone-lua { display: none; }
+
+.menu-hamburguer {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+    SEÇÃO HERO / MÁQUINA DE ESCREVER
+   ========================================================================== */
+.secao-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.saudacao {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.nome-principal {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.subtitulo-efeito {
+    font-size: 1.6rem;
+    color: var(--cor-texto-suave);
+    min-height: 2.2rem;
+}
+
+.cursor {
+    animation: piscar 0.7s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.apresentacao-resumo {
+    max-width: 600px;
+    margin: 20px 0 30px 0;
+    color: var(--cor-texto-suave);
+}
+
+.grupo-botoes-hero {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botao-primario, .botao-secundario {
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transicao-suave);
+}
+
+.botao-primario {
+    background-color: var(--cor-primaria);
+    color: #121212;
+}
+
+body.tema-claro .botao-primario {
+    color: #FFFFFF;
+}
+
+.botao-primario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(187, 134, 252, 0.4);
+}
+
+.botao-secundario {
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+}
+
+.botao-secundario:hover {
+    background-color: var(--cor-superficie);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+    SOBRE & LINHA DO TEMPO (EDUCAÇÃO)
+   ========================================================================== */
+.cartao-sobre, .cartao-educacao {
+    background-color: var(--cor-superficie);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-card);
+}
+
+.cartao-sobre p {
+    margin-bottom: 15px;
+}
+
+.instituicao {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Linha do tempo */
+.linha-do-tempo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--cor-borda);
+}
+
+.etapa-linha {
+    position: relative;
+}
+
+.icone-etapa {
+    position: absolute;
+    left: -33px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--cor-superficie);
+    border: 2px solid var(--cor-borda);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--cor-texto-suave);
+}
+
+.etapa-linha.ativa .icone-etapa {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+.tag-status {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.em-andamento { background-color: rgba(187, 134, 252, 0.2); color: var(--cor-primaria); }
+.proximo-passo { background-color: rgba(255, 193, 7, 0.2); color: #FFC107; }
+.futuro { background-color: rgba(108, 117, 125, 0.2); color: var(--cor-texto-suave); }
+
+/* ==========================================================================
+    HABILIDADES, PROJETOS E ESTUDOS
+   ========================================================================== */
+.grade-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.cartao-habilidade {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transicao-suave);
+}
+
+.cartao-habilidade i {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.cartao-habilidade:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-primaria);
+}
+
+/* Grade de Projetos (3 colunas Desktop) */
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cartao-projeto {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: var(--transicao-suave);
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-8px);
+}
+
+.imagem-projeto {
+    height: 160px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-placeholder {
+    font-size: 3.5rem;
+    color: var(--cor-texto-suave);
+}
+
+.conteudo-projeto {
+    padding: 20px;
+}
+
+.titulo-projeto {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.descricao-projeto {
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 15px;
+}
+
+.tags-tecnologias {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tags-tecnologias span {
+    font-size: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.links-projeto {
+    display: flex;
+    gap: 10px;
+}
+
+.link-botao {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 6px;
+    background-color: var(--cor-primaria);
+    color: #121212;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+body.tema-claro .link-botao { color: #FFF; }
+
+.link-botao.secundario {
+    background-color: transparent;
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+}
+
+/* Repositórios de Estudo */
+.grade-estudos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cartao-estudo {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    padding: 18px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: var(--transicao-suave);
+}
+
+.cartao-estudo:hover {
+    border-color: var(--cor-primaria);
+    transform: translateX(8px);
+}
+
+.icone-pasta {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+}
+
+.info-estudo {
+    flex: 1;
+}
+
+.info-estudo p {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+}
+
+.icone-seta {
+    font-size: 1.2rem;
+    color: var(--cor-texto-suave);
+}
+
+/* ==========================================================================
+    CONTATO & HOVER EFECTS
+   ========================================================================== */
+.grade-contatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.cartao-contato {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transicao-suave);
+}
+
+.cartao-contato i {
+    font-size: 2.2rem;
+}
+
+.cartao-contato span {
+    font-weight: 600;
+}
+
+.cartao-contato small {
+    color: var(--cor-texto-suave);
+}
+
+/* Efeitos Hover nos Contatos */
+.cartao-email:hover { border-color: #EA4335; color: #EA4335; transform: translateY(-5px); }
+.cartao-github:hover { border-color: #6e5494; color: #6e5494; transform: translateY(-5px); }
+.cartao-whatsapp:hover { border-color: #25D366; color: #25D366; transform: translateY(-5px); }
+
+/* ==========================================================================
+    RODAPÉ E BOTÃO VOLTAR AO TOPO
+   ========================================================================== */
+.rodape {
+    padding: 30px 0;
+    border-top: 1px solid var(--cor-borda);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+}
+
+.icone-coracao {
+    color: #E63946;
+}
+
+#botao-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    color: #121212;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transicao-suave);
+    z-index: 99;
+}
+
+#botao-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==========================================================================
+    RESPONSIVIDADE (MOBILE FIRST)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .grade-projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .navegacao {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-superficie);
+        border-bottom: 1px solid var(--cor-borda);
+        padding: 20px;
+        display: none;
+    }
+
+    .navegacao.ativa {
+        display: block;
+    }
+
+    .lista-navegacao {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nome-principal {
+        font-size: 2.4rem;
+    }
+
+    .grade-projetos {
+        grid-template-columns: 1fr;
+    }
+}

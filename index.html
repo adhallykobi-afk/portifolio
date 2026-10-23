@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Adhally Kobi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Estilo CSS Interno / Vinculado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="modo-escuro">
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="cabecalho">
+        <nav class="navegacao container">
+            <a href="#" class="logo">&lt;AdhallyKobi /&gt;</a>
+            
+            <button class="botao-menu-mobile" id="botao-menu-mobile" aria-label="Abrir Menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <ul class="menu-navegacao" id="menu-navegacao">
+                <li><a href="#inicio" class="link-menu">Início</a></li>
+                <li><a href="#sobre" class="link-menu">Sobre Mim</a></li>
+                <li><a href="#educacao" class="link-menu">Educação</a></li>
+                <li><a href="#projetos" class="link-menu">Projetos</a></li>
+                <li><a href="#contato" class="link-menu">Contato</a></li>
+            </ul>
+
+            <button id="alternador-tema" class="botao-tema" aria-label="Alternar Tema">
+                <i class="bi bi-sun-fill" id="icone-tema"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section id="inicio" class="secao-hero container">
+        <div class="conteudo-hero">
+            <p class="subtitulo-hero">Olá, meu nome é</p>
+            <h1 class="titulo-principal">Adhally Kobi</h1>
+            <h2 class="efeito-digitacao"><span id="texto-maquina-escrever"></span><span class="cursor-pisca">|</span></h2>
+            <p class="descricao-hero">
+                Estudante do 1º ano do Ensino Médio Técnico em Informática para Internet pela SESC Escola / SENAC. 
+                Sou apaixonado por criar interfaces interativas e busco minha primeira oportunidade na área de tecnologia.
+            </p>
+            <div class="acoes-hero">
+                <a href="curriculo.pdf" download class="botao-principal">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i> Baixar meu CV
+                </a>
+                <a href="#contato" class="botao-secundario">Fale Comigo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim e Habilidades -->
+    <section id="sobre" class="secao container revelacao-scroll">
+        <h2 class="titulo-secao">Sobre Mim & Habilidades</h2>
+        <div class="conteudo-sobre">
+            <div class="cartao-sobre">
+                <p>
+                    Minha jornada no desenvolvimento começou com foco no Front-end. 
+                    Nos próximos anos, minha formação se expandirá para o Back-end (2º ano) e desenvolvimento Mobile (3º ano), 
+                    construindo uma base sólida para me tornar um Desenvolvedor Full Stack completo.
+                </p>
+            </div>
+            <div class="grade-habilidades">
+                <div class="item-habilidade"><i class="bi bi-filetype-html"></i><span>HTML5</span></div>
+                <div class="item-habilidade"><i class="bi bi-filetype-css"></i><span>CSS3</span></div>
+                <div class="item-habilidade"><i class="bi bi-filetype-js"></i><span>JavaScript</span></div>
+                <div class="item-habilidade"><i class="bi bi-diagram-3-fill"></i><span>Lógica</span></div>
+                <div class="item-habilidade"><i class="bi bi-code-square"></i><span>Algoritmos</span></div>
+                <div class="item-habilidade"><i class="bi bi-git"></i><span>Git</span></div>
+                <div class="item-habilidade"><i class="bi bi-github"></i><span>GitHub</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Educação - Opção 1: Linha do Tempo (Roadmap) -->
+    <section id="educacao" class="secao container revelacao-scroll">
+        <h2 class="titulo-secao">Formação & Trilha do Curso</h2>
+        <div class="cartao-educacao">
+            <div class="cabecalho-educacao">
+                <i class="bi bi-mortarboard-fill icone-instituicao"></i>
+                <div>
+                    <h3>Ensino Médio Integrado ao Técnico em Informática para Internet</h3>
+                    <p class="instituicao">SESC ESCOLA & SENAC — Conclusão prevista: 2026</p>
+                </div>
+            </div>
+
+            <!-- Roadmap / Linha do Tempo -->
+            <div class="linha-tempo">
+                <div class="etapa-linha-tempo ativo">
+                    <div class="marcador-etapa"><i class="bi bi-laptop"></i></div>
+                    <div class="conteudo-etapa">
+                        <span class="tag-status status-andamento">Atual / Em andamento</span>
+                        <h4>1º Ano: Front-end</h4>
+                        <p>Construção de interfaces modernas, responsivas e interativas utilizando HTML5, CSS3 e JavaScript Vanilla.</p>
+                    </div>
+                </div>
+
+                <div class="etapa-linha-tempo">
+                    <div class="marcador-etapa"><i class="bi bi-server"></i></div>
+                    <div class="conteudo-etapa">
+                        <span class="tag-status status-proximo">Próximo Passo</span>
+                        <h4>2º Ano: Back-end</h4>
+                        <p>Regras de negócio, manipulação de bancos de dados, criação de APIs e servidores.</p>
+                    </div>
+                </div>
+
+                <div class="etapa-linha-tempo">
+                    <div class="marcador-etapa"><i class="bi bi-phone"></i></div>
+                    <div class="conteudo-etapa">
+                        <span class="tag-status status-futuro">Futuro</span>
+                        <h4>3º Ano: Mobile</h4>
+                        <p>Desenvolvimento de aplicações móveis nativas/híbridas completas para smartphones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos e Repositórios -->
+    <section id="projetos" class="secao container revelacao-scroll">
+        <h2 class="titulo-secao">Projetos & Estudos</h2>
+        
+        <h3 class="subtitulo-categoria">Projetos de Destaque</h3>
+        <div class="grade-projetos">
+            <!-- Projeto 1 -->
+            <div class="cartao-projeto">
+                <div class="imagem-projeto">
+                    <i class="bi bi-calculator-fill icone-placeholder"></i>
+                </div>
+                <div class="corpo-projeto">
+                    <h4>Calculadora de IMC Interativa</h4>
+                    <p>Aplicação web para cálculo do Índice de Massa Corporal com validação de dados e interface intuitiva.</p>
+                    <div class="tags-tecnologias">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://adhallykobi-afk.github.io/calculadora-imc" target="_blank" class="link-botao"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                        <a href="https://github.com/adhallykobi-afk" target="_blank" class="link-botao secundario"><i class="bi bi-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="cartao-projeto">
+                <div class="imagem-projeto">
+                    <i class="bi bi-controller icone-placeholder"></i>
+                </div>
+                <div class="corpo-projeto">
+                    <h4>Jogo da Velha em JS</h4>
+                    <p>Jogo clássico interativo desenvolvido durante as aulas práticas de lógica de programação e manipulação de DOM.</p>
+                    <div class="tags-tecnologias">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://adhallykobi-afk.github.io/jogo-da-velha" target="_blank" class="link-botao"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+                        <a href="https://github.com/adhallykobi-afk" target="_blank" class="link-botao secundario"><i class="bi bi-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="subtitulo-categoria espaco-topo">Repositórios de Estudo</h3>
+        <div class="grade-repositorios">
+            <a href="https://github.com/adhallykobi-afk" target="_blank" class="cartao-repositorio">
+                <i class="bi bi-journal-code"></i>
+                <div>
+                    <h4>Trilha de HTML e CSS</h4>
+                    <p>Exercícios e layouts desenvolvidos em sala</p>
+                </div>
+            </a>
+            <a href="https://github.com/adhallykobi-afk" target="_blank" class="cartao-repositorio">
+                <i class="bi bi-code-slash"></i>
+                <div>
+                    <h4>Trilha de JavaScript Vanilla</h4>
+                    <p>Algoritmos e manipulação de DOM</p>
+                </div>
+            </a>
+            <a href="https://github.com/adhallykobi-afk" target="_blank" class="cartao-repositorio">
+                <i class="bi bi-terminal"></i>
+                <div>
+                    <h4>Lógica de Programação</h4>
+                    <p>Exercícios básicos de estruturas de repetição</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="secao container revelacao-scroll">
+        <h2 class="titulo-secao">Vamos Conversar?</h2>
+        <p class="descricao-contato">Sinta-se à vontade para se conectar comigo ou mandar uma mensagem!</p>
+        
+        <div class="grade-contatos">
+            <a href="mailto:adhallykobi@gmail.com" target="_blank" class="cartao-contato email">
+                <i class="bi bi-envelope-fill"></i>
+                <span>E-mail</span>
+                <small>adhallykobi@gmail.com</small>
+            </a>
+            <a href="https://github.com/adhallykobi-afk" target="_blank" class="cartao-contato github">
+                <i class="bi bi-github"></i>
+                <span>GitHub</span>
+                <small>@adhallykobi-afk</small>
+            </a>
+            <a href="https://wa.me/556593346895" target="_blank" class="cartao-contato whatsapp">
+                <i class="bi bi-whatsapp"></i>
+                <span>WhatsApp</span>
+                <small>+55 65 9334-6895</small>
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container conteudo-rodape">
+            <p>Copyright © <span id="ano-atual"></span> | Adhally Kobi</p>
+            <p>Desenvolvido com <i class="bi bi-suit-heart-fill icone-coracao"></i> por <strong>Adhally Kobi</strong></p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <button id="botao-topo" class="botao-topo" aria-label="Voltar ao Topo">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    <!-- Script JS Interno / Vinculado -->
+    <script src="script.js"></script>
+</body>
+</html>

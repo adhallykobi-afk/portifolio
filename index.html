@@ -3,272 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Adhally Kobi</title>
+    <title>Portfólio | adhally - Desenvolvedora Front-end</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
-    <!-- Estilo CSS -->
+    <!-- Estilo CSS Interno/Externo -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="tema-escuro">
+<body>
 
     <!-- Cabeçalho / Navegação -->
     <header class="cabecalho">
-        <div class="conteiner-cabecalho">
-            <a href="#inicio" class="logotipo">&lt;AdhallyKobi /&gt;</a>
+        <nav class="navegacao container">
+            <a href="#" class="logotipo">adhally<span>.dev</span></a>
             
-            <button class="menu-hamburguer" id="botao-menu" aria-label="Abrir Menu">
-                <i class="bi bi-list"></i>
-            </button>
-
-            <nav class="navegacao" id="navegacao-principal">
+            <div class="menu-navegacao" id="menu-navegacao">
                 <ul class="lista-navegacao">
-                    <li><a href="#inicio" class="link-nav">Início</a></li>
-                    <li><a href="#sobre" class="link-nav">Sobre</a></li>
-                    <li><a href="#educacao" class="link-nav">Educação</a></li>
-                    <li><a href="#habilidades" class="link-nav">Habilidades</a></li>
-                    <li><a href="#projetos" class="link-nav">Projetos</a></li>
-                    <li><a href="#estudos" class="link-nav">Estudos</a></li>
-                    <li><a href="#contato" class="link-nav">Contato</a></li>
+                    <li><a href="#inicio" class="link-menu">Início</a></li>
+                    <li><a href="#sobre" class="link-menu">Sobre Mim</a></li>
+                    <li><a href="#formacao" class="link-menu">Formação</a></li>
+                    <li><a href="#projetos" class="link-menu">Projetos</a></li>
+                    <li><a href="#contato" class="link-menu">Contato</a></li>
                 </ul>
-            </nav>
+            </div>
 
-            <button class="botao-tema" id="botao-alternar-tema" aria-label="Alternar Tema">
-                <i class="bi bi-sun-fill icone-sol"></i>
-                <i class="bi bi-moon-stars-fill icone-lua"></i>
-            </button>
-        </div>
+            <div class="acoes-cabecalho">
+                <button id="botao-tema" class="botao-tema" aria-label="Alternar tema de cores">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+                <button id="botao-menu-mobile" class="botao-menu-mobile" aria-label="Abrir menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <!-- Seção Principal (Hero) -->
-        <section id="inicio" class="secao-hero">
-            <div class="conteiner secao-hero-conteudo">
-                <span class="saudacao">Olá, bem-vindo(a) ao meu portfólio!</span>
-                <h1 class="nome-principal">Adhally Kobi</h1>
-                <h2 class="subtitulo-efeito"><span id="texto-maquina-escrever"></span><span class="cursor">|</span></h2>
-                <p class="apresentacao-resumo">
-                    Estudante de Informática para Internet focado em criar interfaces incríveis, modernas e funcionais para a Web.
+        <!-- Seção Hero / Apresentação -->
+        <section id="inicio" class="secao-hero container">
+            <div class="conteudo-hero">
+                <span class="tag-boas-vindas"> Bem-vindo(a) ao meu portfólio</span>
+                <h1 class="titulo-principal">Olá, eu sou a adhally</h1>
+                <h2 class="subtitulo-maquina-escrever"><span id="texto-digitado"></span><span class="cursor-pisca">|</span></h2>
+                <p class="descricao-hero">
+                    Estudante do 1º ano do Ensino Médio Técnico em Informática para Internet pela <strong>SESC Escola em parceria com o SENAC</strong>. Apaixonada por criar interfaces encantadoras, modernas e funcionais.
                 </p>
-                <div class="grupo-botoes-hero">
-                    <a href="curriculo.pdf" target="_blank" class="botao-primario">
+                <div class="botoes-hero">
+                    <a href="curriculo.pdf" download="curriculo.pdf" class="botao-primario">
                         <i class="bi bi-file-earmark-arrow-down-fill"></i> Baixar meu CV
                     </a>
                     <a href="#contato" class="botao-secundario">
-                        <i class="bi bi-chat-text-fill"></i> Fale Comigo
+                        <i class="bi bi-chat-heart-fill"></i> Vamos Conversar
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Seção Sobre Mim -->
-        <section id="sobre" class="secao">
-            <div class="conteiner">
-                <h2 class="titulo-secao"><i class="bi bi-person-badge"></i> Sobre Mim</h2>
-                <div class="cartao-sobre">
-                    <p>
-                        Sou estudante do 1º ano do Ensino Médio Técnico em Informática para Internet pela SESC Escola, em parceria com o SENAC. Com forte foco em programação, iniciei minha trilha de aprendizado me especializando em desenvolvimento Front-end.
-                    </p>
-                    <p>
-                        Nos próximos anos, minha formação se expandirá para o Back-end (2º ano) e desenvolvimento Mobile (3º ano), construindo uma base sólida para me tornar um Desenvolvedor Full Stack. Sou apaixonado por criar interfaces interativas e busco minha primeira oportunidade na área de tecnologia.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Educação (Opção 1: Linha do Tempo) -->
-        <section id="educacao" class="secao">
-            <div class="conteiner">
-                <h2 class="titulo-secao"><i class="bi bi-journal-bookmark-fill"></i> Formação Técnica</h2>
-                <div class="cartao-educacao">
-                    <div class="cabecalho-educacao">
-                        <h3>Ensino Médio Integrado ao Técnico em Informática para Internet</h3>
-                        <p class="instituicao">SESC ESCOLA & SENAC — Conclusão prevista: 2026</p>
-                    </div>
-                    
-                    <!-- Roadmap em Linha do Tempo -->
-                    <div class="linha-do-tempo">
-                        <div class="etapa-linha ativa">
-                            <div class="icone-etapa"><i class="bi bi-code-slash"></i></div>
-                            <div class="conteudo-etapa">
-                                <span class="tag-status em-andamento">1º Ano • Em Andamento</span>
-                                <h4>Especialização Front-end</h4>
-                                <p>HTML5, CSS3, JavaScript Vanilla, Lógica de Programação e Versionamento com Git/GitHub.</p>
-                            </div>
-                        </div>
-
-                        <div class="etapa-linha">
-                            <div class="icone-etapa"><i class="bi bi-server"></i></div>
-                            <div class="conteudo-etapa">
-                                <span class="tag-status proximo-passo">2º Ano • Próximo Passo</span>
-                                <h4>Especialização Back-end</h4>
-                                <p>Estrutura de Banco de Dados, APIs, Regras de Negócio e Linguagens Server-side.</p>
-                            </div>
-                        </div>
-
-                        <div class="etapa-linha">
-                            <div class="icone-etapa"><i class="bi bi-phone"></i></div>
-                            <div class="conteudo-etapa">
-                                <span class="tag-status futuro">3º Ano • Futuro</span>
-                                <h4>Especialização Mobile</h4>
-                                <p>Desenvolvimento de Aplicações Móveis Nativas e Híbridas para Android e iOS.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Habilidades -->
-        <section id="habilidades" class="secao">
-            <div class="conteiner">
-                <h2 class="titulo-secao"><i class="bi bi-tools"></i> Minhas Habilidades</h2>
-                <div class="grade-habilidades">
-                    <div class="cartao-habilidade"><i class="bi bi-filetype-html"></i><span>HTML5</span></div>
-                    <div class="cartao-habilidade"><i class="bi bi-filetype-css"></i><span>CSS3</span></div>
-                    <div class="cartao-habilidade"><i class="bi bi-filetype-js"></i><span>JavaScript</span></div>
-                    <div class="cartao-habilidade"><i class="bi bi-cpu"></i><span>Lógica de Programação</span></div>
-                    <div class="cartao-habilidade"><i class="bi bi-diagram-3"></i><span>Algoritmos</span></div>
-                    <div class="cartao-habilidade"><i class="bi bi-git"></i><span>Git</span></div>
-                    <div class="cartao-habilidade"><i class="bi bi-github"></i><span>GitHub</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Projetos de Destaque -->
-        <section id="projetos" class="secao">
-            <div class="conteiner">
-                <h2 class="titulo-secao"><i class="bi bi-briefcase-fill"></i> Projetos de Destaque</h2>
-                <div class="grade-projetos">
-                    
-                    <!-- Projeto 1 -->
-                    <article class="cartao-projeto">
-                        <div class="imagem-projeto">
-                            <i class="bi bi-laptop icone-placeholder"></i>
-                        </div>
-                        <div class="conteudo-projeto">
-                            <h3 class="titulo-projeto">DevSetup</h3>
-                            <p class="descricao-projeto">Aplicação web desenvolvida para a organização e escolha de configurações de ambientes de desenvolvimento.</p>
-                            <div class="tags-tecnologias">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                            </div>
-                            <div class="links-projeto">
-                                <a href="https://adhallykobi-afk.github.io/projeto-devsetup/" target="_blank" class="link-botao"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
-                                <a href="https://github.com/adhallykobi-afk/projeto-devsetup" target="_blank" class="link-botao secundario"><i class="bi bi-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 2 -->
-                    <article class="cartao-projeto">
-                        <div class="imagem-projeto">
-                            <i class="bi bi-music-note-list icone-placeholder"></i>
-                        </div>
-                        <div class="conteudo-projeto">
-                            <h3 class="titulo-projeto">Compasso Musical</h3>
-                            <p class="descricao-projeto">Página interativa criada para exibição de teoria e elementos de ritmos e compassos musicais.</p>
-                            <div class="tags-tecnologias">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                            </div>
-                            <div class="links-projeto">
-                                <a href="https://adhallykobi-afk.github.io/compasso-musical/" target="_blank" class="link-botao"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
-                                <a href="https://github.com/adhallykobi-afk/compasso-musical" target="_blank" class="link-botao secundario"><i class="bi bi-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Repositórios de Estudo -->
-        <section id="estudos" class="secao">
-            <div class="conteiner">
-                <h2 class="titulo-secao"><i class="bi bi-book-fill"></i> Repositórios de Estudo</h2>
-                <p class="subtitulo-secao">Anotações e exercícios práticos desenvolvidos durante as aulas:</p>
+        <section id="sobre" class="secao-sobre container secao-oculta">
+            <h2 class="titulo-secao">Sobre Mim</h2>
+            <div class="card-sobre">
+                <p>
+                    Sou estudante do 1º ano do Ensino Médio Técnico em Informática para Internet pela <strong>SESC Escola</strong>, em parceria com o <strong>SENAC</strong>. Com forte foco em programação, iniciei minha trilha de aprendizado me especializando em desenvolvimento <strong>Front-end</strong>.
+                </p>
+                <p>
+                    Nos próximos anos, minha formação se expandirá para o <strong>Back-end</strong> (2º ano) e desenvolvimento <strong>Mobile</strong> (3º ano), construindo uma base sólida para me tornar uma Desenvolvedora Full Stack. Sou apaixonada por criar interfaces interativas e busco minha primeira oportunidade na área de tecnologia.
+                </p>
                 
-                <div class="grade-estudos">
-                    <a href="https://github.com/adhallykobi-afk/html" target="_blank" class="cartao-estudo">
-                        <i class="bi bi-folder-fill icone-pasta"></i>
-                        <div class="info-estudo">
-                            <h4>Trilha de HTML e CSS</h4>
-                            <p>Exercícios de estruturação web, CSS Flexbox e estilização.</p>
-                        </div>
-                        <i class="bi bi-arrow-right icone-seta"></i>
-                    </a>
-
-                    <a href="https://github.com/adhallykobi-afk/javascript" target="_blank" class="cartao-estudo">
-                        <i class="bi bi-folder-fill icone-pasta"></i>
-                        <div class="info-estudo">
-                            <h4>Trilha de JavaScript Vanilla</h4>
-                            <p>Manipulação de DOM, eventos, funções e scripts interativos.</p>
-                        </div>
-                        <i class="bi bi-arrow-right icone-seta"></i>
-                    </a>
-
-                    <a href="https://github.com/adhallykobi-afk/algoritmos" target="_blank" class="cartao-estudo">
-                        <i class="bi bi-folder-fill icone-pasta"></i>
-                        <div class="info-estudo">
-                            <h4>Lógica e Algoritmos</h4>
-                            <p>Exercícios de lógica de programação em Portugol / Pseudocódigo.</p>
-                        </div>
-                        <i class="bi bi-arrow-right icone-seta"></i>
-                    </a>
+                <div class="container-habilidades">
+                    <h3 class="subtitulo-habilidades">Minhas Hard Skills</h3>
+                    <div class="grid-habilidades">
+                        <div class="item-habilidade"><i class="bi bi-filetype-html"></i> HTML5</div>
+                        <div class="item-habilidade"><i class="bi bi-filetype-css"></i> CSS3</div>
+                        <div class="item-habilidade"><i class="bi bi-filetype-js"></i> JavaScript</div>
+                        <div class="item-habilidade"><i class="bi bi-code-slash"></i> Lógica de Programação</div>
+                        <div class="item-habilidade"><i class="bi bi-diagram-2"></i> Algoritmos</div>
+                        <div class="item-habilidade"><i class="bi bi-git"></i> Git</div>
+                        <div class="item-habilidade"><i class="bi bi-github"></i> GitHub</div>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Seção Educação / Formação (Opção 3: UI/UX Clean com Glassmorphism) -->
+        <section id="formacao" class="secao-formacao container secao-oculta">
+            <h2 class="titulo-secao">Educação e Trilha Acadêmica</h2>
+            
+            <div class="card-formacao-principal">
+                <div class="cabecalho-formacao">
+                    <div class="selo-excelencia">
+                        <i class="bi bi-patch-check-fill"></i> Instituição de Excelência
+                    </div>
+                    <h3>Técnico em Informática para Internet</h3>
+                    <h4>SESC ESCOLA & SENAC (Conclusão prevista: 2026)</h4>
+                </div>
+
+                <div class="grid-modulos-trilha">
+                    <!-- Módulo 1 (Atual) -->
+                    <div class="card-modulo modulo-ativo">
+                        <div class="status-modulo">1º Ano • Em Andamento </div>
+                        <i class="bi bi-code-square icone-modulo"></i>
+                        <h5>Módulo 1: Front-end</h5>
+                        <p>Foco em estrutura, estilização e interatividade com HTML5, CSS3 puro e JavaScript Vanilla.</p>
+                    </div>
+
+                    <!-- Módulo 2 -->
+                    <div class="card-modulo">
+                        <div class="status-modulo">2º Ano • Próximo Passo</div>
+                        <i class="bi bi-server icone-modulo"></i>
+                        <h5>Módulo 2: Back-end</h5>
+                        <p>Desenvolvimento de servidores, banco de dados e APIs para suporte à lógica da aplicação.</p>
+                    </div>
+
+                    <!-- Módulo 3 -->
+                    <div class="card-modulo">
+                        <div class="status-modulo">3º Ano • Futuro</div>
+                        <i class="bi bi-phone icone-modulo"></i>
+                        <h5>Módulo 3: Mobile</h5>
+                        <p>Criação e publicação de aplicativos móveis nativos e híbridos para smartphones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos e Estudos -->
+        <section id="projetos" class="secao-projetos container secao-oculta">
+            <h2 class="titulo-secao">Meu Portfólio e Estudos</h2>
+
+            <!-- Subseção A: Projetos de Destaque -->
+            <h3 class="subtitulo-categoria"><i class="bi bi-star-fill"></i> Projetos de Destaque</h3>
+            <div class="grid-projetos-principais">
+                <!-- Projeto DevSetup -->
+                <article class="card-projeto">
+                    <div class="imagem-placeholder-projeto">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="conteudo-card-projeto">
+                        <h4>Projeto DevSetup</h4>
+                        <p>Aplicação desenvolvida para gerenciar rotinas de configuração e ambiente de desenvolvimento.</p>
+                        <div class="tags-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="botoes-card-projeto">
+                            <a href="https://github.com/adhallykobi-afk/projeto-devsetup.git" target="_blank" class="botao-card">
+                                <i class="bi bi-github"></i> Repositório
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto Compasso Musical -->
+                <article class="card-projeto">
+                    <div class="imagem-placeholder-projeto">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </div>
+                    <div class="conteudo-card-projeto">
+                        <h4>Compasso Musical</h4>
+                        <p>Aplicação interativa voltada ao universo musical e contagem de tempo de compassos.</p>
+                        <div class="tags-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="botoes-card-projeto">
+                            <a href="https://github.com/adhallykobi-afk/compasso-musical.git" target="_blank" class="botao-card">
+                                <i class="bi bi-github"></i> Repositório
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Subseção B: Repositórios de Estudo -->
+            <h3 class="subtitulo-categoria"><i class="bi bi-journal-bookmark-fill"></i> Repositórios de Estudo</h3>
+            <div class="grid-repositorios-estudo">
+                <a href="https://github.com/adhallykobi-afk/html.git" target="_blank" class="card-repositorio">
+                    <i class="bi bi-filetype-html"></i>
+                    <div>
+                        <h5>Trilha de HTML e CSS</h5>
+                        <p>Exercícios, estruturas semânticas e estilizações com CSS3.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/adhallykobi-afk/javascript.git" target="_blank" class="card-repositorio">
+                    <i class="bi bi-filetype-js"></i>
+                    <div>
+                        <h5>Trilha de JavaScript Vanilla</h5>
+                        <p>Manipulação de DOM, funções, eventos e lógica prática.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/adhallykobi-afk/algoritmos.git" target="_blank" class="card-repositorio">
+                    <i class="bi bi-cpu"></i>
+                    <div>
+                        <h5>Lógica de Programação e Algoritmos</h5>
+                        <p>Exercícios práticos de raciocínio lógico e estruturação.</p>
+                    </div>
+                </a>
             </div>
         </section>
 
         <!-- Seção Contato -->
-        <section id="contato" class="secao">
-            <div class="conteiner">
-                <h2 class="titulo-secao"><i class="bi bi-chat-dots-fill"></i> Vamos Conversar?</h2>
-                <p class="subtitulo-secao">Sinta-se à vontade para entrar em contato ou acompanhar meus estudos!</p>
-                
-                <div class="grade-contatos">
-                    <a href="mailto:adhallykobi@gmail.com" class="cartao-contato cartao-email">
-                        <i class="bi bi-envelope-at-fill"></i>
-                        <span>E-mail</span>
-                        <small>adhallykobi@gmail.com</small>
-                    </a>
+        <section id="contato" class="secao-contato container secao-oculta">
+            <h2 class="titulo-secao">Vamos Conversar?</h2>
+            <p class="subtitulo-contato">Sinta-se à vontade para se conectar comigo através das redes abaixo:</p>
 
-                    <a href="https://github.com/adhallykobi-afk" target="_blank" class="cartao-contato cartao-github">
-                        <i class="bi bi-github"></i>
-                        <span>GitHub</span>
-                        <small>@adhallykobi-afk</small>
-                    </a>
+            <div class="grid-cards-contato">
+                <!-- E-mail -->
+                <a href="mailto:adhallykobi@gmail.com" class="card-contato email">
+                    <i class="bi bi-envelope-heart-fill"></i>
+                    <span>E-mail</span>
+                    <small>adhallykobi@gmail.com</small>
+                </a>
 
-                    <a href="https://wa.me/5565993346895" target="_blank" class="cartao-contato cartao-whatsapp">
-                        <i class="bi bi-whatsapp"></i>
-                        <span>WhatsApp</span>
-                        <small>(65) 99334-6895</small>
-                    </a>
-                </div>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/556593346895" target="_blank" class="card-contato whatsapp">
+                    <i class="bi bi-whatsapp"></i>
+                    <span>WhatsApp</span>
+                    <small>+55 65 9334-6895</small>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/adhallykobi-afk" target="_blank" class="card-contato github">
+                    <i class="bi bi-github"></i>
+                    <span>GitHub</span>
+                    <small>@livsn7</small>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/adhally.victoria" target="_blank" class="card-contato instagram">
+                    <i class="bi bi-instagram"></i>
+                    <span>Instagram</span>
+                    <small>@adhally.victoria</small>
+                </a>
             </div>
         </section>
     </main>
 
     <!-- Rodapé -->
     <footer class="rodape">
-        <div class="conteinerconteudo-rodape">
-            <p>Desenvolvido com <i class="bi bi-suit-heart-fill icone-coracao"></i> por <strong>Adhally Kobi</strong></p>
-            <p class="copyright">&copy; <span id="ano-atual"></span> Todos os direitos reservados.</p>
+        <div class="container conteudo-rodape">
+            <p>Copyright © <span id="ano-atual"></span> • Desenvolvido com <i class="bi bi-heart-fill icone-coracao"></i> por <strong>adhally</strong></p>
         </div>
     </footer>
 
     <!-- Botão Voltar ao Topo -->
-    <button id="botao-topo" aria-label="Voltar ao Topo">
-        <i class="bi bi-arrow-up"></i>
+    <button id="botao-topo" class="botao-topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-short"></i>
     </button>
 
-    <!-- Script JS -->
     <script src="script.js"></script>
 </body>
 </html>

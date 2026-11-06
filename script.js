@@ -1,94 +1,118 @@
 /* ==========================================================================
-    PORTFÓLIO DEV - JAVASCRIPT VANILLA
+   PORTFÓLIO DEV - SCRIPT PRINCIPAL
+   Lógica desenvolvida em JavaScript Vanilla
    ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
+    
     // 1. ALTERNÂNCIA DE TEMA (DARK / LIGHT MODE)
-    const botaoAlternarTema = document.getElementById('botao-alternar-tema');
-    const corpoPagina = document.body;
+    const botaoTema = document.getElementById("botao-tema");
+    const iconeTema = botaoTema.querySelector("i");
 
-    botaoAlternarTema.addEventListener('click', () => {
-        corpoPagina.classList.toggle('tema-escuro');
-        corpoPagina.classList.toggle('tema-claro');
+    botaoTema.addEventListener("click", () => {
+        document.body.classList.toggle("tema-escuro");
+        
+        if (document.body.classList.contains("tema-escuro")) {
+            iconeTema.className = "bi bi-sun-fill";
+        } else {
+            iconeTema.className = "bi bi-moon-stars-fill";
+        }
     });
 
-    // 2. MENU MOBILE (HAMBÚRGUER)
-    const botaoMenu = document.getElementById('botao-menu');
-    const navegacaoPrincipal = document.getElementById('navegacao-principal');
-    const linksNav = document.querySelectorAll('.link-nav');
-
-    botaoMenu.addEventListener('click', () => {
-        navegacaoPrincipal.classList.toggle('ativa');
-    });
-
-    // Fecha o menu ao clicar em qualquer link
-    linksNav.forEach(link => {
-        link.addEventListener('click', () => {
-            navegacaoPrincipal.classList.remove('ativa');
-        });
-    });
-
-    // 3. EFEITO MÁQUINA DE ESCREVER (TYPING EFFECT)
-    const elementoTexto = document.getElementById('texto-maquina-escrever');
-    const textosParaDigitar = [
-        "Estudante de Desenvol. Full Stack",
+    // 2. EFEITO MÁQUINA DE ESCREVER NA SEÇÃO HERO
+    const elementoTexto = document.getElementById("texto-digitado");
+    const frasesApresentacao = [
+        "Estudante de Desenvolvimento Full Stack",
         "Especializando em Front-end",
-        "HTML5 • CSS3 • JavaScript"
+        "Futura Desenvolvedora Back-end & Mobile"
     ];
-
-    let indiceTexto = 0;
+    
+    let indiceFrase = 0;
     let indiceCaractere = 0;
-    let estaDeletando = false;
+    let estaApagando = false;
 
-    function digitarEfeito() {
-        const textoAtual = textosParaDigitar[indiceTexto];
+    function executarEfeitoDigitacao() {
+        const fraseAtual = frasesApresentacao[indiceFrase];
 
-        if (estaDeletando) {
-            elementoTexto.textContent = textoAtual.substring(0, indiceCaractere - 1);
+        if (estaApagando) {
+            elementoTexto.textContent = fraseAtual.substring(0, indiceCaractere - 1);
             indiceCaractere--;
         } else {
-            elementoTexto.textContent = textoAtual.substring(0, indiceCaractere + 1);
+            elementoTexto.textContent = fraseAtual.substring(0, indiceCaractere + 1);
             indiceCaractere++;
         }
 
-        let velocidadeDigitacao = estaDeletando ? 50 : 100;
+        let velocidade = estaApagando ? 50 : 100;
 
-        if (!estaDeletando && indiceCaractere === textoAtual.length) {
-            velocidadeDigitacao = 2000; // Pausa no final do texto
-            estaDeletando = true;
-        } else if (estaDeletando && indiceCaractere === 0) {
-            estaDeletando = false;
-            indiceTexto = (indiceTexto + 1) % textosParaDigitar.length;
-            velocidadeDigitacao = 500;
+        if (!estaApagando && indiceCaractere === fraseAtual.length) {
+            velocidade = 2000; // Pausa no final da frase
+            estaApagando = true;
+        } else if (estaApagando && indiceCaractere === 0) {
+            estaApagando = false;
+            indiceFrase = (indiceFrase + 1) % frasesApresentacao.length;
+            velocidade = 500;
         }
 
-        setTimeout(digitarEfeito, velocidadeDigitacao);
+        setTimeout(executarEfeitoDigitacao, velocidade);
     }
 
-    digitarEfeito();
+    executarEfeitoDigitacao();
 
-    // 4. BOTÃO VOLTAR AO TOPO
-    const botaoTopo = document.getElementById('botao-topo');
+    // 3. MENU HAMBÚRGUER MOBILE
+    const botaoMenuMobile = document.getElementById("botao-menu-mobile");
+    const menuNavegacao = document.getElementById("menu-navegacao");
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            botaoTopo.classList.add('visivel');
+    botaoMenuMobile.addEventListener("click", () => {
+        menuNavegacao.classList.toggle("ativo");
+        const iconeMenu = botaoMenuMobile.querySelector("i");
+        
+        if (menuNavegacao.classList.contains("ativo")) {
+            iconeMenu.className = "bi bi-x-lg";
         } else {
-            botaoTopo.classList.remove('visivel');
+            iconeMenu.className = "bi bi-list";
         }
     });
 
-    botaoTopo.addEventListener('click', () => {
+    // Fechar menu ao clicar em um link
+    document.querySelectorAll(".link-menu").forEach(link => {
+        link.addEventListener("click", () => {
+            menuNavegacao.classList.remove("ativo");
+            botaoMenuMobile.querySelector("i").className = "bi bi-list";
+        });
+    });
+
+    // 4. BOTÃO VOLTAR AO TOPO
+    const botaoTopo = document.getElementById("botao-topo");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            botaoTopo.classList.add("visivel");
+        } else {
+            botaoTopo.classList.remove("visivel");
+        }
+    });
+
+    botaoTopo.addEventListener("click", () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: "smooth"
         });
     });
 
     // 5. ANO DINÂMICO NO RODAPÉ
-    const elementoAno = document.getElementById('ano-atual');
-    if (elementoAno) {
-        elementoAno.textContent = new Date().getFullYear();
-    }
+    const elementoAno = document.getElementById("ano-atual");
+    elementoAno.textContent = new Date().getFullYear();
+
+    // 6. ANIMAÇÃO DE FADE-IN EM CADA SEÇÃO DURANTE A ROLAGEM
+    const secoesOcultas = document.querySelectorAll(".secao-oculta");
+
+    const observadorScroll = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("secao-visivel");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    secoesOcultas.forEach(secao => observadorScroll.observe(secao));
 });

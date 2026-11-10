@@ -1,6 +1,6 @@
 /* ==========================================================================
-   PORTFÓLIO DEV - SCRIPT PRINCIPAL
-   Lógica desenvolvida em JavaScript Vanilla
+    PORTFÓLIO DEV - SCRIPT PRINCIPAL (TEMA AZUL & MODERNO)
+    Lógica desenvolvida em JavaScript Vanilla
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,18 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.toggle("tema-escuro");
         
         if (document.body.classList.contains("tema-escuro")) {
-            iconeTema.className = "bi bi-sun-fill";
+            iconeTema.className = "bi bi-brightness-high";
         } else {
-            iconeTema.className = "bi bi-moon-stars-fill";
+            iconeTema.className = "bi bi-moon-stars";
         }
     });
 
-    // 2. EFEITO MÁQUINA DE ESCREVER NA SEÇÃO HERO
+    // 2. EFEITO MÁQUINA DE ESCREVER NA SEÇÃO HERO (Focado em Front-end & Dev)
     const elementoTexto = document.getElementById("texto-digitado");
     const frasesApresentacao = [
-        "Estudante de Desenvolvimento Full Stack",
-        "Especializando em Front-end",
-        "Futura Desenvolvedora Back-end & Mobile"
+        "desenvolvendo interfaces web modernas",
+        "construindo experiências digitais de impacto",
+        "transformando código em soluções front-end"
     ];
     
     let indiceFrase = 0;
@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
             indiceCaractere++;
         }
 
-        let velocidade = estaApagando ? 50 : 100;
+        let velocidade = estaApagando ? 40 : 90;
 
         if (!estaApagando && indiceCaractere === fraseAtual.length) {
-            velocidade = 2000; // Pausa no final da frase
+            velocidade = 2200; // Pausa no final da frase
             estaApagando = true;
         } else if (estaApagando && indiceCaractere === 0) {
             estaApagando = false;
             indiceFrase = (indiceFrase + 1) % frasesApresentacao.length;
-            velocidade = 500;
+            velocidade = 400;
         }
 
         setTimeout(executarEfeitoDigitacao, velocidade);
@@ -101,7 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. ANO DINÂMICO NO RODAPÉ
     const elementoAno = document.getElementById("ano-atual");
-    elementoAno.textContent = new Date().getFullYear();
+    if (elementoAno) {
+        elementoAno.textContent = new Date().getFullYear();
+    }
 
     // 6. ANIMAÇÃO DE FADE-IN EM CADA SEÇÃO DURANTE A ROLAGEM
     const secoesOcultas = document.querySelectorAll(".secao-oculta");
